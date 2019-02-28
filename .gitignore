@@ -1,1 +1,6 @@
 *.PYC
+*.xml
+test.py
+*.iml
+.DS_Store
+.idea
