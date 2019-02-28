@@ -3,4 +3,6 @@
 test.py
 *.iml
 .DS_Store
+.idea/
+settings_bot.py
 .idea
