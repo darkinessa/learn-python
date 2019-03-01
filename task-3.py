@@ -26,19 +26,22 @@ list_pupils = (
 
 
 all_school_score = []
-all_class_scores = []
-
-sum_score = 0
-mid_class_score = 0
-mid_school_score = 0
 
 for i in list_pupils:
+
+    all_class_scores = []
+
+    sum_score = 0
+    mid_class_score = 0
+    mid_school_score = 0
+
     all_class_scores = all_class_scores + i['scores']
     sum_score = listsum(all_class_scores)
     i['sum_score'] = sum_score
 
-    mid_class_score = round(sum_score / len(i['scores']))
-    i['mid_score'] = mid_class_score
+
+    mid_class_score = sum_score / len(i['scores'])
+    i['mid_score'] = round(mid_class_score)
 
     new_element = i['scores']
     all_school_score.append(new_element)
@@ -46,9 +49,10 @@ for i in list_pupils:
 all_school_score = listmerge(all_school_score)
 mid_school_score = listsum(all_school_score) / len(all_school_score)
 
-
+print()
 print('Средняяя темпeратура по больничке: ', round(mid_school_score))
 print()
+
 print('Средняя темпeратура по каждому классу:')
 
 for i in list_pupils:
