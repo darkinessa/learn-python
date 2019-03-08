@@ -48,3 +48,4 @@ input_string_1 = 'sss'
 input_string_2 = 'learn'
 
 print(string_compare(input_string_1, input_string_2))
+
