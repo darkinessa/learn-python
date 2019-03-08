@@ -5,8 +5,6 @@ import logging
 from telegram.ext import Updater, CommandHandler, MessageHandler, Filters
 
 
-
-
 def start(bot, update):
     text = 'Вызван /start'
     logging.info(text)
@@ -80,7 +78,7 @@ def main():
                         level=logging.INFO,
                         filename='bot.log')
 
-    astro_bot = Updater(bot_settings.BOT_KEY, request_kwargs=bot_settings.PROXY)
+    astro_bot = Updater(settings_bot.BOT_KEY, request_kwargs=settings_bot.PROXY)
 
     logging.info('Запуск прошел успешно')
 
